@@ -8,6 +8,7 @@
 <?php include 'api.php'; ?>
 <?php include 'functions.php'; ?>
 <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/nav.css" crossorigin="anonymous">
 <?php $сlassroomTimetable = getClassroomTimetable($db, $_POST['date1'], $_POST['date2'], $_POST['classroom'] ); ?>
 <div class="container">
 <p><?php $startDate = date("d.m.Y", strtotime($_POST['date1']));

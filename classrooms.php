@@ -13,12 +13,32 @@
 <?php include 'api.php'; ?>
 	<div id="content">
 		<div class="container-fluid">
-			<p><form name="inputForm" action="classroom.php" method="post" onsubmit="return SendForm();">
- 			<p>Выбор дня: C <input type="date" id="date1" name="date1" onclick="dataRange()"/> по <input type="date" id="date2" name="date2" onclick="dataRange()"/> </p>
- 			<p>Аудитория <input type="number" name="classroom" max="1350" min="100" value="" />
- 			<p><input type="submit" class="btn btn-primary" value="Отправить запрос"/></p>
+			<form name="inputForm" action="classroom.php" method="post" onsubmit="return SendForm();" class="container mt-4">
+                <div class="form-group row">
+                    <label for="date1" class="col-form-label col-sm-3 mb-1">Дата вывода расписания : </label>
+                    <div class="col-sm-9 row">
+                        <div class="col-sm-6 mb-2">
+                            <input type="date" class="form-control" id="date1" name="date1" onclick="dataRange()">
+                            <small class="form-text text-muted">Начальная дата</small>
+                        </div>
+                        <div class="col-sm-6 mb-2">
+                            <input type="date" class="form-control" id="date2" name="date2" onclick="dataRange()">
+                            <small class="form-text text-muted">Конечная дата</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="classroom" class="col-form-label col-sm-3 mb-1">Аудитория : </label>
+                    <div class="col-sm-9 row">
+                        <div class="col-sm-6 mb-2">
+                            <input type="number" class="form-control" name="classroom" max="1350" min="100" value="" />
+                        </div>
+                    </div>
+                </div>
+ 			<div class="col text-center">
+                <button type="submit" class="btn btn-primary text-center">Отправить запрос</button>
+            </div>
 			</form>
-			</p>
 		</div>
 	</div>
 </body>
